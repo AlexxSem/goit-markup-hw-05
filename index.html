@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -51,7 +52,7 @@
         <section class="section hero-section">
             <div class="container hero-container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button class="btn btn-hero" type="button">Заказать услугу</button>
+                <button class="btn btn-hero" data-modal-open type="button">Заказать услугу</button>
             </div>
         </section>
         <section class="section benefit-section">
@@ -101,19 +102,28 @@
             <h2 class="work title main-title work-main-title">Чем мы занимаемся</h2>
             <ul class="list work-list">
                 <li class="work-item">
-                    <img src="./images/Programer-1.jpg" alt="програмист работает за ноутбуком"
+                    <div class="work-item-wrap">
+                    <img class="work-photo" src="./images/Programer-1.jpg" alt="програмист работает за ноутбуком"
                     width="370"
-                    height="294">                    
+                    height="294">
+                    <p class="work-item-text">Десктопные приложения</p>
+                    </div>
                 </li>
                 <li class="work-item">
-                    <img src="./images/developer-2.jpg" alt="разработчик работает над проектом"
+                    <div class="work-item-wrap">
+                    <img class="work-photo" src="./images/developer-2.jpg" alt="разработчик работает над проектом"
                     width="370" 
-                    height="294">                     
+                    height="294">
+                    <p class="work-item-text">Мобильные приложения</p>
+                    </div>
                 </li>
                 <li class="work-item">
-                    <img src="./images/webdesign-3.jpg" alt="вебдизайнер выбирает цветовую гамму"
+                    <div class="work-item-wrap">
+                    <img class="work-photo" src="./images/webdesign-3.jpg" alt="вебдизайнер выбирает цветовую гамму"
                     width="370" 
-                    height="294">                    
+                    height="294">
+                    <p class="work-item-text">Дизайнерские решения</p>
+                    </div>
                 </li>                    
             </ul>
             </div>
@@ -385,5 +395,15 @@
         </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button type="button" class="modal-btn" data-modal-close>
+            <svg class="modal-close-icon">
+                <use href="./images/icons.svg#icon-close-black"></use>
+            </svg>
+        </button>
+    </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
